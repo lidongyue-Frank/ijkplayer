@@ -231,3 +231,8 @@ typedef NS_ENUM(NSInteger, IJKMediaEvent) {
 - (int)invoke:(IJKMediaEvent)event attributes:(NSDictionary *)attributes;
 
 @end
+
+
+- (void)stopRecord;
+- (void)startRecordWithFileName:(NSString *)fileName;
+- (BOOL)isRecording;
