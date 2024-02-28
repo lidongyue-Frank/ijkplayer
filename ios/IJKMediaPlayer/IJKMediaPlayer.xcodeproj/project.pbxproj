@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075DE9BA2B8F286400F44935 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9B92B8F286400F44935 /* libcrypto.a */; };
+		075DE9BC2B8F288000F44935 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9BB2B8F288000F44935 /* libssl.a */; };
 		0763C4BE2B70E2FE002009FE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0763C4BD2B70E2FE002009FE /* libcrypto.a */; };
 		215FF44B22B7E83500FAAD0E /* IJKFFMediaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		215FF44C22B7E83500FAAD0E /* IJKFFMediaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */; };
@@ -414,6 +416,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075DE9B92B8F286400F44935 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../build/universal/lib/libcrypto.a; sourceTree = "<group>"; };
+		075DE9BB2B8F288000F44935 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../build/universal/lib/libssl.a; sourceTree = "<group>"; };
 		0763C4BB2B70E2B9002009FE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../../lib/openssl-3.0.10/libssl.a"; sourceTree = "<group>"; };
 		0763C4BD2B70E2FE002009FE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../../lib/openssl-3.0.10/libcrypto.a"; sourceTree = "<group>"; };
 		215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKFFMediaPlayer.h; sourceTree = "<group>"; };
@@ -655,6 +659,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075DE9BC2B8F288000F44935 /* libssl.a in Frameworks */,
+				075DE9BA2B8F286400F44935 /* libcrypto.a in Frameworks */,
 				21DAA15D2298FED6007B0784 /* libbz2.tbd in Frameworks */,
 				21DAA15B2298FEC7007B0784 /* libz.tbd in Frameworks */,
 				E653C6F61BCE5A750016835A /* libavcodec.a in Frameworks */,
@@ -827,7 +833,9 @@
 		E6903EBB17EAF6C500CFD954 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				075DE9BB2B8F288000F44935 /* libssl.a */,
 				0763C4BD2B70E2FE002009FE /* libcrypto.a */,
+				075DE9B92B8F286400F44935 /* libcrypto.a */,
 				0763C4BB2B70E2B9002009FE /* libssl.a */,
 				21DAA15C2298FED6007B0784 /* libbz2.tbd */,
 				5450AF8F1E63E59800568494 /* libz.tbd */,
@@ -1763,7 +1771,7 @@
 		21E6F50122C39D0500611D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -1830,7 +1838,7 @@
 		21E6F50222C39D0500611D3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -2009,10 +2017,7 @@
 		E654EA9D1B6B27E600B0F2D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					arm64,
-				);
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -2077,10 +2082,7 @@
 		E654EA9E1B6B27E600B0F2D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					arm64,
-				);
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;

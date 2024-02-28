@@ -19,9 +19,9 @@
 #----------
 # modify for your build tool
 
-FF_ALL_ARCHS_IOS6_SDK="armv7 armv7s i386"
-FF_ALL_ARCHS_IOS7_SDK="armv7 armv7s arm64 i386 x86_64"
-FF_ALL_ARCHS_IOS8_SDK="armv7 arm64 i386 x86_64"
+FF_ALL_ARCHS_IOS6_SDK="i386"
+FF_ALL_ARCHS_IOS7_SDK="arm64 x86_64"
+FF_ALL_ARCHS_IOS8_SDK="arm64 x86_64"
 
 FF_ALL_ARCHS=$FF_ALL_ARCHS_IOS8_SDK
 
@@ -156,7 +156,7 @@ elif [ "$FF_TARGET" = "clean" ]; then
     echo "clean success"
 else
     echo "Usage:"
-    echo "  compile-ffmpeg.sh armv7|arm64|i386|x86_64"
+    echo "  compile-ffmpeg.sh arm64|x86_64"
     echo "  compile-ffmpeg.sh armv7s (obselete)"
     echo "  compile-ffmpeg.sh lipo"
     echo "  compile-ffmpeg.sh all"
