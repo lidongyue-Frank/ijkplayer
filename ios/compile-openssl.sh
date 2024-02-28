@@ -19,9 +19,9 @@
 #----------
 # modify for your build tool
 
-FF_ALL_ARCHS_IOS6_SDK="armv7 armv7s i386"
-FF_ALL_ARCHS_IOS7_SDK="armv7 armv7s arm64 i386 x86_64"
-FF_ALL_ARCHS_IOS8_SDK="armv7 arm64 i386 x86_64"
+FF_ALL_ARCHS_IOS6_SDK="armv7 armv7s"
+FF_ALL_ARCHS_IOS7_SDK="armv7 armv7s arm64"
+FF_ALL_ARCHS_IOS8_SDK="armv7 arm64"
 
 FF_ALL_ARCHS=$FF_ALL_ARCHS_IOS8_SDK
 
@@ -94,7 +94,7 @@ elif [ "$FF_TARGET" = "clean" ]; then
     done
 else
     echo "Usage:"
-    echo "  compile-openssl.sh armv7|arm64|i386|x86_64"
+    echo "  compile-openssl.sh armv7|arm64"
     echo "  compile-openssl.sh armv7s (obselete)"
     echo "  compile-openssl.sh lipo"
     echo "  compile-openssl.sh all"
