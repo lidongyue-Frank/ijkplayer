@@ -66,6 +66,11 @@ int       ffp_wait_stop_l(FFPlayer *ffp);
 
 void      ffp_take_snapshot(FFPlayer *ffp);
 
+//录制相关
+int       ffp_start_record(FFPlayer *ffp, const char *file_name);
+int       ffp_stop_record(FFPlayer *ffp);
+int       ffp_record_file(FFPlayer *ffp, AVPacket *packet);
+
 /* all in milliseconds */
 int       ffp_seek_to_l(FFPlayer *ffp, long msec);
 long      ffp_get_current_position_l(FFPlayer *ffp);

@@ -699,12 +699,41 @@ int ijkmp_get_loop(IjkMediaPlayer *mp)
 
 void ijkmp_take_snapshot(IjkMediaPlayer *mp)
 {
+    ALOGE("截图 ALOGE 0222- 11:22");//日志可打印
+    printf("截图 printf 0222- 11:22");//日志可打印
+    av_log(mp->ffplayer, AV_LOG_INFO, "截图: av_log 0222- 11:22 ");
     assert(mp);
     pthread_mutex_lock(&mp->mutex);
     ffp_take_snapshot(mp->ffplayer);
     pthread_mutex_unlock(&mp->mutex);
 }
 
+int ijkmp_start_record(IjkMediaPlayer *mp,const char *file_name)
+{
+    ALOGE("start_record");//日志可打印
+    assert(mp);
+    MPTRACE("ijkmp_startRecord()\n");
+    pthread_mutex_lock(&mp->mutex);
+    int retval = ffp_start_record(mp->ffplayer,file_name);
+    pthread_mutex_unlock(&mp->mutex);
+    MPTRACE("ijkmp_startRecord()=%d\n", retval);
+    return retval;
+}
+
+int ijkmp_stop_record(IjkMediaPlayer *mp)
+{
+    ALOGE("stop_record");//日志可打印
+    assert(mp);
+    MPTRACE("ijkmp_stopRecord()\n");
+    pthread_mutex_lock(&mp->mutex);
+    int retval = ffp_stop_record(mp->ffplayer);
+    pthread_mutex_unlock(&mp->mutex);
+    MPTRACE("ijkmp_stopRecord()=%d\n", retval);
+    return retval;
+}
+int ijkmp_isRecording(IjkMediaPlayer *mp) {
+    return mp->ffplayer->is_record;
+}
 
 void *ijkmp_get_weak_thiz(IjkMediaPlayer *mp)
 {

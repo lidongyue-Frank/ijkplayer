@@ -1806,6 +1806,22 @@ static int ijkff_inject_callback(void *opaque, int message, void *data, size_t d
     });
 }
 
+#pragma mark  --录像
+- (void)stopRecord{
+    ijkmp_stop_record(_mediaPlayer);
+    NSLog(@"stop record");
+}
+- (void)startRecordWithFileName:(NSString *)fileName{
+    // 视频存储的路径
+    const char *path = [fileName cStringUsingEncoding:NSUTF8StringEncoding];
+    ijkmp_start_record(_mediaPlayer, path);
+    
+    NSLog(@"start record fileName %@",fileName);
+}
+- (BOOL)isRecording {
+    return ijkmp_isRecording(_mediaPlayer);
+}
+
 #pragma mark IJKFFHudController
 - (void)setHudValue:(NSString *)value forKey:(NSString *)key
 {

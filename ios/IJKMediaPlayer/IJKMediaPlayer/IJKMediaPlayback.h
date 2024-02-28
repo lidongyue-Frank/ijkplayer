@@ -77,6 +77,10 @@ typedef NS_ENUM(NSInteger, IJKMPMovieTimeOption) {
 - (void)shutdown;
 - (void)setPauseInBackground:(BOOL)pause;
 
+- (void)stopRecord;
+- (void)startRecordWithFileName:(NSString *)fileName;
+- (BOOL)isRecording;
+
 #if IJK_IOS
 @property(nonatomic, readonly)  UIView *view;
 #endif
@@ -207,6 +211,7 @@ typedef NS_ENUM(NSInteger, IJKMediaEvent) {
      segmentIndex:(int)segmentIndex
      retryCounter:(int)retryCounter;
 
+
 @property(nonatomic, readonly) IJKMediaEvent event;
 @property(nonatomic, readonly) int segmentIndex;
 @property(nonatomic, readonly) int retryCounter;
@@ -231,3 +236,5 @@ typedef NS_ENUM(NSInteger, IJKMediaEvent) {
 - (int)invoke:(IJKMediaEvent)event attributes:(NSDictionary *)attributes;
 
 @end
+
+
