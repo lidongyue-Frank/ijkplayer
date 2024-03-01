@@ -710,25 +710,27 @@ void ijkmp_take_snapshot(IjkMediaPlayer *mp)
 
 int ijkmp_start_record(IjkMediaPlayer *mp,const char *file_name)
 {
-    ALOGE("start_record");//日志可打印
-    assert(mp);
-    MPTRACE("ijkmp_startRecord()\n");
     pthread_mutex_lock(&mp->mutex);
+    assert(mp);
+    printf("=====开始录制准备=====");
+            MPTRACE("ijkmp_startRecord()\n");
     int retval = ffp_start_record(mp->ffplayer,file_name);
+    printf("=====开始录制已调用=====\n");
+            MPTRACE("ijkmp_startRecord()=%d\n", retval);
     pthread_mutex_unlock(&mp->mutex);
-    MPTRACE("ijkmp_startRecord()=%d\n", retval);
     return retval;
 }
 
 int ijkmp_stop_record(IjkMediaPlayer *mp)
 {
-    ALOGE("stop_record");//日志可打印
-    assert(mp);
-    MPTRACE("ijkmp_stopRecord()\n");
     pthread_mutex_lock(&mp->mutex);
+    assert(mp);
+            MPTRACE("ijkmp_stopRecord()\n");
+    printf("=====结束录制准备=====\n");
     int retval = ffp_stop_record(mp->ffplayer);
+    printf("=====结束录制已调用=====\n");
+            MPTRACE("ijkmp_stopRecord()=%d\n", retval);
     pthread_mutex_unlock(&mp->mutex);
-    MPTRACE("ijkmp_stopRecord()=%d\n", retval);
     return retval;
 }
 int ijkmp_isRecording(IjkMediaPlayer *mp) {
