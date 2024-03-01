@@ -48,6 +48,10 @@
     [options setFormatOptionIntValue:1                  forKey:@"reconnect"];
     [options setFormatOptionIntValue:30 * 1000 * 1000   forKey:@"timeout"];
     [options setFormatOptionValue:@"ijkplayer"          forKey:@"user-agent"];
+    
+    //录制加的
+      //使用tcp
+    [options setFormatOptionValue:@"tcp"                forKey:@"rtsp_transport"];
 
     options.showHudView   = NO;
 

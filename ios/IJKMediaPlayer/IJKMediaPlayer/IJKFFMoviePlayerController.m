@@ -42,7 +42,7 @@
 #import "ijkplayer/ijkavformat/ijkioapplication.h"
 #include "string.h"
 
-static const char *kIJKFFRequiredFFmpegVersion = "ff4.0--ijk0.8.8--20210522--926";
+static const char *kIJKFFRequiredFFmpegVersion = "ff4.0--ijk0.8.8--20211030--926";
 
 // It means you didn't call shutdown if you found this object leaked.
 @interface IJKWeakHolder : NSObject
@@ -1804,6 +1804,22 @@ static int ijkff_inject_callback(void *opaque, int message, void *data, size_t d
             [self pause];
         }
     });
+}
+
+#pragma mark  --录像
+- (void)stopRecord{
+    ijkmp_stop_record(_mediaPlayer);
+    NSLog(@"stop record");
+}
+- (void)startRecordWithFileName:(NSString *)fileName{
+    // 视频存储的路径
+    const char *path = [fileName cStringUsingEncoding:NSUTF8StringEncoding];
+    ijkmp_start_record(_mediaPlayer, path);
+    
+    NSLog(@"start record fileName %@",fileName);
+}
+- (BOOL)isRecording {
+    return ijkmp_isRecording(_mediaPlayer);
 }
 
 #pragma mark IJKFFHudController

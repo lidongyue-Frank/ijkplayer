@@ -700,6 +700,8 @@ int ijkmp_get_loop(IjkMediaPlayer *mp)
 void ijkmp_take_snapshot(IjkMediaPlayer *mp)
 {
     ALOGE("截图 ALOGE 0222- 11:22");//日志可打印
+    printf("截图 printf 0222- 11:22");//日志可打印
+    av_log(mp->ffplayer, AV_LOG_INFO, "截图: av_log 0222- 11:22 ");
     assert(mp);
     pthread_mutex_lock(&mp->mutex);
     ffp_take_snapshot(mp->ffplayer);
@@ -731,7 +733,7 @@ int ijkmp_stop_record(IjkMediaPlayer *mp)
 }
 int ijkmp_isRecording(IjkMediaPlayer *mp) {
     return mp->ffplayer->is_record;
-
+}
 
 void *ijkmp_get_weak_thiz(IjkMediaPlayer *mp)
 {

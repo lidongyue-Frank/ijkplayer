@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075DE9BA2B8F286400F44935 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9B92B8F286400F44935 /* libcrypto.a */; };
+		075DE9BC2B8F288000F44935 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9BB2B8F288000F44935 /* libssl.a */; };
+		0763C4BE2B70E2FE002009FE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0763C4BD2B70E2FE002009FE /* libcrypto.a */; };
 		215FF44B22B7E83500FAAD0E /* IJKFFMediaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		215FF44C22B7E83500FAAD0E /* IJKFFMediaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */; };
 		215FF44D22B7E83500FAAD0E /* IJKFFMediaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 215FF44A22B7E83500FAAD0E /* IJKFFMediaPlayer.m */; };
@@ -18,8 +21,6 @@
 		21B62DA42334C3FA005E1C40 /* IJKSDLFboGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B62DA02334C3FA005E1C40 /* IJKSDLFboGLView.m */; };
 		21B62DA52334C3FA005E1C40 /* IJKSDLFboGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B62DA02334C3FA005E1C40 /* IJKSDLFboGLView.m */; };
 		21B62DA62334C3FA005E1C40 /* IJKSDLFboGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B62DA02334C3FA005E1C40 /* IJKSDLFboGLView.m */; };
-		21DAA1592298FEBB007B0784 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8B1E63E59300568494 /* libcrypto.a */; };
-		21DAA15A2298FEBE007B0784 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8C1E63E59300568494 /* libssl.a */; };
 		21DAA15B2298FEC7007B0784 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8F1E63E59800568494 /* libz.tbd */; };
 		21DAA15D2298FED6007B0784 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DAA15C2298FED6007B0784 /* libbz2.tbd */; };
 		21E6F47C22C39D0500611D3D /* IJKKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = E65DC3B819D93D5F004F8A08 /* IJKKVOController.m */; };
@@ -281,8 +282,6 @@
 		5450B03C1E63EA4300568494 /* IJKSDLHudViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E68B7ACD1C1E97B0001DE241 /* IJKSDLHudViewCell.h */; };
 		5450B03D1E63EA4300568494 /* IJKVideoToolBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 5407EC271DF7F93B00457BFE /* IJKVideoToolBox.h */; };
 		5450B03E1E63EA4300568494 /* NSString+IJKMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = E69808991C7EB13A0048A46C /* NSString+IJKMedia.h */; };
-		5450B0451E63EAB700568494 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8B1E63E59300568494 /* libcrypto.a */; };
-		5450B0461E63EAB700568494 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8C1E63E59300568494 /* libssl.a */; };
 		5450B0471E63EABC00568494 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8F1E63E59800568494 /* libz.tbd */; };
 		549385C41E640456001AE08D /* IJKMediaFrameworkWithSSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 5450AF9B1E63E65700568494 /* IJKMediaFrameworkWithSSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54A029B61D4700E6001C61C1 /* ijkasync.c in Sources */ = {isa = PBXBuildFile; fileRef = 54A029B11D4700E6001C61C1 /* ijkasync.c */; };
@@ -417,6 +416,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075DE9B92B8F286400F44935 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../build/universal/lib/libcrypto.a; sourceTree = "<group>"; };
+		075DE9BB2B8F288000F44935 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../build/universal/lib/libssl.a; sourceTree = "<group>"; };
+		0763C4BB2B70E2B9002009FE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../../lib/openssl-3.0.10/libssl.a"; sourceTree = "<group>"; };
+		0763C4BD2B70E2FE002009FE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../../lib/openssl-3.0.10/libcrypto.a"; sourceTree = "<group>"; };
 		215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKFFMediaPlayer.h; sourceTree = "<group>"; };
 		215FF44A22B7E83500FAAD0E /* IJKFFMediaPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IJKFFMediaPlayer.m; sourceTree = "<group>"; };
 		21B62D9F2334C3FA005E1C40 /* IJKSDLFboGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKSDLFboGLView.h; sourceTree = "<group>"; };
@@ -641,9 +644,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0763C4BE2B70E2FE002009FE /* libcrypto.a in Frameworks */,
 				5450B0471E63EABC00568494 /* libz.tbd in Frameworks */,
-				5450B0451E63EAB700568494 /* libcrypto.a in Frameworks */,
-				5450B0461E63EAB700568494 /* libssl.a in Frameworks */,
 				5450B0181E63EA4300568494 /* libavcodec.a in Frameworks */,
 				5450B0191E63EA4300568494 /* libavfilter.a in Frameworks */,
 				5450B01A1E63EA4300568494 /* libavformat.a in Frameworks */,
@@ -657,10 +659,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075DE9BC2B8F288000F44935 /* libssl.a in Frameworks */,
+				075DE9BA2B8F286400F44935 /* libcrypto.a in Frameworks */,
 				21DAA15D2298FED6007B0784 /* libbz2.tbd in Frameworks */,
 				21DAA15B2298FEC7007B0784 /* libz.tbd in Frameworks */,
-				21DAA15A2298FEBE007B0784 /* libssl.a in Frameworks */,
-				21DAA1592298FEBB007B0784 /* libcrypto.a in Frameworks */,
 				E653C6F61BCE5A750016835A /* libavcodec.a in Frameworks */,
 				E653C6F81BCE5A750016835A /* libavfilter.a in Frameworks */,
 				E653C6FA1BCE5A750016835A /* libavformat.a in Frameworks */,
@@ -831,6 +833,10 @@
 		E6903EBB17EAF6C500CFD954 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				075DE9BB2B8F288000F44935 /* libssl.a */,
+				0763C4BD2B70E2FE002009FE /* libcrypto.a */,
+				075DE9B92B8F286400F44935 /* libcrypto.a */,
+				0763C4BB2B70E2B9002009FE /* libssl.a */,
 				21DAA15C2298FED6007B0784 /* libbz2.tbd */,
 				5450AF8F1E63E59800568494 /* libz.tbd */,
 				5450AF8B1E63E59300568494 /* libcrypto.a */,
@@ -1765,7 +1771,7 @@
 		21E6F50122C39D0500611D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -1798,6 +1804,7 @@
 					../build/universal/include,
 					IJKMediaPlayer/ijkmedia,
 					../../ijkmedia,
+					"/usr/local/Cellar/openssl@3/3.2.1/include",
 				);
 				INFOPLIST_FILE = "${SRCROOT}/IJKMediaPlayer/IJKMediaPlayer.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1806,6 +1813,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/universal/lib\"",
+					"/usr/local/Cellar/openssl@3/3.2.1/lib",
 				);
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1830,7 +1838,7 @@
 		21E6F50222C39D0500611D3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -1858,6 +1866,7 @@
 					../build/universal/include,
 					IJKMediaPlayer/ijkmedia,
 					../../ijkmedia,
+					"/usr/local/Cellar/openssl@3/3.2.1/include",
 				);
 				INFOPLIST_FILE = "${SRCROOT}/IJKMediaPlayer/IJKMediaPlayer.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1866,6 +1875,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/universal/lib\"",
+					"/usr/local/Cellar/openssl@3/3.2.1/lib",
 				);
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1918,6 +1928,7 @@
 					../build/universal/include,
 					IJKMediaPlayer/ijkmedia,
 					../../ijkmedia,
+					"/usr/local/Cellar/openssl@3/3.2.1/include",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/IJKMediaFrameworkWithSSL.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1926,12 +1937,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/universal/lib\"",
+					"/usr/local/Cellar/openssl@3/3.2.1/lib",
 				);
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = (
 					"-read_only_relocs",
 					suppress,
+					"-lssl",
+					"-lcrypto",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tv.danmaku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1971,6 +1985,7 @@
 					../build/universal/include,
 					IJKMediaPlayer/ijkmedia,
 					../../ijkmedia,
+					"/usr/local/Cellar/openssl@3/3.2.1/include",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/IJKMediaFrameworkWithSSL.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1979,12 +1994,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/universal/lib\"",
+					"/usr/local/Cellar/openssl@3/3.2.1/lib",
 				);
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-read_only_relocs",
 					suppress,
+					"-lssl",
+					"-lcrypto",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tv.danmaku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1999,7 +2017,7 @@
 		E654EA9D1B6B27E600B0F2D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -2031,6 +2049,7 @@
 					../build/universal/include,
 					IJKMediaPlayer/ijkmedia,
 					../../ijkmedia,
+					"/usr/local/Cellar/openssl@3/3.2.1/include",
 				);
 				INFOPLIST_FILE = IJKMediaFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -2039,6 +2058,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/universal/lib\"",
+					"/usr/local/Cellar/openssl@3/3.2.1/lib",
 				);
 				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -2062,7 +2082,7 @@
 		E654EA9E1B6B27E600B0F2D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = arm64;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -2089,6 +2109,7 @@
 					../build/universal/include,
 					IJKMediaPlayer/ijkmedia,
 					../../ijkmedia,
+					"/usr/local/Cellar/openssl@3/3.2.1/include",
 				);
 				INFOPLIST_FILE = IJKMediaFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -2097,6 +2118,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/universal/lib\"",
+					"/usr/local/Cellar/openssl@3/3.2.1/lib",
 				);
 				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = NO;
