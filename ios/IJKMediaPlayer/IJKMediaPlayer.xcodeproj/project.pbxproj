@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		075DE9BA2B8F286400F44935 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9B92B8F286400F44935 /* libcrypto.a */; };
-		075DE9BC2B8F288000F44935 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9BB2B8F288000F44935 /* libssl.a */; };
-		0763C4BE2B70E2FE002009FE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0763C4BD2B70E2FE002009FE /* libcrypto.a */; };
+		075DE9C32B9021FC00F44935 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9BB2B8F288000F44935 /* libssl.a */; };
+		076AB7682B9029C3001DECB1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9B92B8F286400F44935 /* libcrypto.a */; };
+		076AB7692B9029C3001DECB1 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075DE9BB2B8F288000F44935 /* libssl.a */; };
 		215FF44B22B7E83500FAAD0E /* IJKFFMediaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		215FF44C22B7E83500FAAD0E /* IJKFFMediaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */; };
 		215FF44D22B7E83500FAAD0E /* IJKFFMediaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 215FF44A22B7E83500FAAD0E /* IJKFFMediaPlayer.m */; };
@@ -110,8 +111,6 @@
 		21E6F4D022C39D0500611D3D /* ffpipeline_ffplay.c in Sources */ = {isa = PBXBuildFile; fileRef = E67B91B21A3801E600717EA9 /* ffpipeline_ffplay.c */; };
 		21E6F4D222C39D0500611D3D /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DAA15C2298FED6007B0784 /* libbz2.tbd */; };
 		21E6F4D322C39D0500611D3D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8F1E63E59800568494 /* libz.tbd */; };
-		21E6F4D422C39D0500611D3D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8C1E63E59300568494 /* libssl.a */; };
-		21E6F4D522C39D0500611D3D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5450AF8B1E63E59300568494 /* libcrypto.a */; };
 		21E6F4D622C39D0500611D3D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E653C6EF1BCE5A750016835A /* libavcodec.a */; };
 		21E6F4D722C39D0500611D3D /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E653C6F01BCE5A750016835A /* libavfilter.a */; };
 		21E6F4D822C39D0500611D3D /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E653C6F11BCE5A750016835A /* libavformat.a */; };
@@ -418,8 +417,6 @@
 /* Begin PBXFileReference section */
 		075DE9B92B8F286400F44935 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../build/universal/lib/libcrypto.a; sourceTree = "<group>"; };
 		075DE9BB2B8F288000F44935 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../build/universal/lib/libssl.a; sourceTree = "<group>"; };
-		0763C4BB2B70E2B9002009FE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../../lib/openssl-3.0.10/libssl.a"; sourceTree = "<group>"; };
-		0763C4BD2B70E2FE002009FE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../../lib/openssl-3.0.10/libcrypto.a"; sourceTree = "<group>"; };
 		215FF44922B7E83500FAAD0E /* IJKFFMediaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKFFMediaPlayer.h; sourceTree = "<group>"; };
 		215FF44A22B7E83500FAAD0E /* IJKFFMediaPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IJKFFMediaPlayer.m; sourceTree = "<group>"; };
 		21B62D9F2334C3FA005E1C40 /* IJKSDLFboGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKSDLFboGLView.h; sourceTree = "<group>"; };
@@ -441,8 +438,6 @@
 		5407EC281DF7F93B00457BFE /* IJKVideoToolBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IJKVideoToolBox.m; path = ijkmedia/ijkplayer/ios/pipeline/IJKVideoToolBox.m; sourceTree = "<group>"; };
 		5407EC2B1DF81D2600457BFE /* IJKVideoToolBoxSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IJKVideoToolBoxSync.h; path = ijkmedia/ijkplayer/ios/pipeline/IJKVideoToolBoxSync.h; sourceTree = "<group>"; };
 		5407EC2C1DF81D2600457BFE /* IJKVideoToolBoxSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IJKVideoToolBoxSync.m; path = ijkmedia/ijkplayer/ios/pipeline/IJKVideoToolBoxSync.m; sourceTree = "<group>"; };
-		5450AF8B1E63E59300568494 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../.warehouse/ff3.2--ijk0.7.6--20170203--001/build/universal/lib/libcrypto.a"; sourceTree = "<group>"; };
-		5450AF8C1E63E59300568494 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../.warehouse/ff3.2--ijk0.7.6--20170203--001/build/universal/lib/libssl.a"; sourceTree = "<group>"; };
 		5450AF8F1E63E59800568494 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5450AF9B1E63E65700568494 /* IJKMediaFrameworkWithSSL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKMediaFrameworkWithSSL.h; sourceTree = "<group>"; };
 		5450B0431E63EA4300568494 /* IJKMediaFrameworkWithSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IJKMediaFrameworkWithSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -627,16 +622,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21E6F4D222C39D0500611D3D /* libbz2.tbd in Frameworks */,
-				21E6F4D322C39D0500611D3D /* libz.tbd in Frameworks */,
-				21E6F4D422C39D0500611D3D /* libssl.a in Frameworks */,
-				21E6F4D522C39D0500611D3D /* libcrypto.a in Frameworks */,
 				21E6F4D622C39D0500611D3D /* libavcodec.a in Frameworks */,
 				21E6F4D722C39D0500611D3D /* libavfilter.a in Frameworks */,
 				21E6F4D822C39D0500611D3D /* libavformat.a in Frameworks */,
 				21E6F4D922C39D0500611D3D /* libavutil.a in Frameworks */,
+				076AB7682B9029C3001DECB1 /* libcrypto.a in Frameworks */,
+				076AB7692B9029C3001DECB1 /* libssl.a in Frameworks */,
 				21E6F4DA22C39D0500611D3D /* libswresample.a in Frameworks */,
 				21E6F4DB22C39D0500611D3D /* libswscale.a in Frameworks */,
+				21E6F4D222C39D0500611D3D /* libbz2.tbd in Frameworks */,
+				21E6F4D322C39D0500611D3D /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,7 +639,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0763C4BE2B70E2FE002009FE /* libcrypto.a in Frameworks */,
 				5450B0471E63EABC00568494 /* libz.tbd in Frameworks */,
 				5450B0181E63EA4300568494 /* libavcodec.a in Frameworks */,
 				5450B0191E63EA4300568494 /* libavfilter.a in Frameworks */,
@@ -659,16 +653,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				075DE9BC2B8F288000F44935 /* libssl.a in Frameworks */,
-				075DE9BA2B8F286400F44935 /* libcrypto.a in Frameworks */,
-				21DAA15D2298FED6007B0784 /* libbz2.tbd in Frameworks */,
-				21DAA15B2298FEC7007B0784 /* libz.tbd in Frameworks */,
 				E653C6F61BCE5A750016835A /* libavcodec.a in Frameworks */,
 				E653C6F81BCE5A750016835A /* libavfilter.a in Frameworks */,
 				E653C6FA1BCE5A750016835A /* libavformat.a in Frameworks */,
 				E653C6FC1BCE5A750016835A /* libavutil.a in Frameworks */,
+				075DE9BA2B8F286400F44935 /* libcrypto.a in Frameworks */,
+				075DE9C32B9021FC00F44935 /* libssl.a in Frameworks */,
 				E653C6FE1BCE5A750016835A /* libswresample.a in Frameworks */,
 				E653C7001BCE5A750016835A /* libswscale.a in Frameworks */,
+				21DAA15D2298FED6007B0784 /* libbz2.tbd in Frameworks */,
+				21DAA15B2298FEC7007B0784 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,13 +828,9 @@
 			isa = PBXGroup;
 			children = (
 				075DE9BB2B8F288000F44935 /* libssl.a */,
-				0763C4BD2B70E2FE002009FE /* libcrypto.a */,
 				075DE9B92B8F286400F44935 /* libcrypto.a */,
-				0763C4BB2B70E2B9002009FE /* libssl.a */,
 				21DAA15C2298FED6007B0784 /* libbz2.tbd */,
 				5450AF8F1E63E59800568494 /* libz.tbd */,
-				5450AF8B1E63E59300568494 /* libcrypto.a */,
-				5450AF8C1E63E59300568494 /* libssl.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1827,7 +1817,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 x86_64 i386 armv7";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1888,7 +1880,9 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 x86_64 i386 armv7";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2071,7 +2065,9 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2130,7 +2126,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				VERSIONING_SYSTEM = "apple-generic";

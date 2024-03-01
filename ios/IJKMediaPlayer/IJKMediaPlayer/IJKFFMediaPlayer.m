@@ -290,6 +290,22 @@ int ff_media_player_msg_loop(void* arg)
     return 0;
 }
 
+#pragma mark  --录像
+- (void)stopRecord{
+    ijkmp_stop_record(_nativeMediaPlayer);
+    NSLog(@"stop record");
+}
+- (void)startRecordWithFileName:(NSString *)fileName{
+    // 视频存储的路径
+    const char *path = [fileName cStringUsingEncoding:NSUTF8StringEncoding];
+    ijkmp_start_record(_nativeMediaPlayer, path);
+    
+    NSLog(@"start record fileName %@",fileName);
+}
+- (BOOL)isRecording {
+    return ijkmp_isRecording(_nativeMediaPlayer);
+}
+
 
 - (void)setOptionValue:(NSString *)value
                 forKey:(NSString *)key

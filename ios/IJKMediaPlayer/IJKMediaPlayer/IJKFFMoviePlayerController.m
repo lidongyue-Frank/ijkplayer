@@ -1809,14 +1809,14 @@ static int ijkff_inject_callback(void *opaque, int message, void *data, size_t d
 #pragma mark  --录像
 - (void)stopRecord{
     ijkmp_stop_record(_mediaPlayer);
-    NSLog(@"stop record");
+    NSLog(@"stop record2222");
 }
 - (void)startRecordWithFileName:(NSString *)fileName{
     // 视频存储的路径
     const char *path = [fileName cStringUsingEncoding:NSUTF8StringEncoding];
     ijkmp_start_record(_mediaPlayer, path);
     
-    NSLog(@"start record fileName %@",fileName);
+    NSLog(@"start record fileName2222 %@",fileName);
 }
 - (BOOL)isRecording {
     return ijkmp_isRecording(_mediaPlayer);
