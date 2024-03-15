@@ -8,7 +8,7 @@ idea.module {
 //    excludeDirs += file('ijkplayer-armv7a/src/')
 //    excludeDirs += file('ijkplayer-armv5/src/')
 //    excludeDirs += file('ijkplayer-x86/src/')
-//    excludeDirs += file('ijkplayer-x86_64/src/')
+    excludeDirs += file('ijkplayer-x86_64/src/')
 }
 
 buildscript {
