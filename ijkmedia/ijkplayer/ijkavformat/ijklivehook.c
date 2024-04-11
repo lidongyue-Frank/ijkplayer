@@ -140,7 +140,7 @@ static int open_inner(AVFormatContext *avf)
     if (c->open_opts)
         av_dict_copy(&tmp_opts, c->open_opts, 0);
 
-    av_dict_set_int(&tmp_opts, "probesize",         avf->probesize, 0);
+    //av_dict_set_int(&tmp_opts, "probesize",         avf->probesize, 0);
     av_dict_set_int(&tmp_opts, "formatprobesize",   avf->format_probesize, 0);
     av_dict_set_int(&tmp_opts, "analyzeduration",   avf->max_analyze_duration, 0);
     av_dict_set_int(&tmp_opts, "fpsprobesize",      avf->fps_probe_size, 0);

@@ -4144,7 +4144,7 @@ static int read_thread(void *arg)
     if (av_stristart(is->filename, "rtmp", NULL) ||
         av_stristart(is->filename, "rtsp", NULL))
     {
-        // There is total different meaning for 'timeout' option in rtmp
+         //There is total different meaning for 'timeout' option in rtmp
         av_log(ffp, AV_LOG_WARNING, "remove 'timeout' option for rtmp.\n");
         av_dict_set(&ffp->format_opts, "timeout", NULL, 0);
     }
@@ -4155,6 +4155,9 @@ static int read_thread(void *arg)
         av_dict_set_int(&ffp->format_opts, "skip-calc-frame-rate", ffp->skip_calc_frame_rate, 0);
     }
 
+//    av_dict_set(&ffp->format_opts,"stimeout","5000000", 0);//设置超时5秒
+//     av_dict_set(&ffp->format_opts,"probesize","100*1024", 0);//设置超时5秒
+//      av_dict_set(&ffp->format_opts,"max_analyze_duration","5 * AV_TIME_BASE", 0);//设置超时5秒
     if (ffp->iformat_name)
         is->iformat = av_find_input_format(ffp->iformat_name);
     err = avformat_open_input(&ic, is->filename, is->iformat, &ffp->format_opts);
@@ -6050,6 +6053,7 @@ void ffp_check_buffering_l(FFPlayer *ffp)
             ffp->playable_duration_ms = buf_time_position;
 
             buf_time_percent = (int)av_rescale(cached_duration_in_ms, 1005, hwm_in_ms * 10);
+            av_log(ffp, AV_LOG_DEBUG, "time cache=%%%d (%d/%d)\n", buf_time_percent, cached_duration_in_ms, hwm_in_ms);
 #ifdef FFP_SHOW_DEMUX_CACHE
             av_log(ffp, AV_LOG_DEBUG, "time cache=%%%d (%d/%d)\n", buf_time_percent, cached_duration_in_ms, hwm_in_ms);
 #endif
