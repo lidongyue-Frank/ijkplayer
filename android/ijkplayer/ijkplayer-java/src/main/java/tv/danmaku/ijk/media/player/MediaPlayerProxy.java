@@ -58,6 +58,11 @@ public class MediaPlayerProxy implements IMediaPlayer {
     public void snapShot(){
         mBackEndMediaPlayer.snapShot();
     }
+//
+//    @Override
+//    public boolean isRecording() {
+//        return mBackEndMediaPlayer.isRecording();
+//    }
 
     @Override
     public void setDataSource(Context context, Uri uri)

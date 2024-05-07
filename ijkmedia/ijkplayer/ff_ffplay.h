@@ -71,6 +71,10 @@ int       ffp_start_record(FFPlayer *ffp, const char *file_name);
 int       ffp_stop_record(FFPlayer *ffp);
 int       ffp_record_file(FFPlayer *ffp, AVPacket *packet);
 
+int       ffp_start_record2(FFPlayer *ffp, const char *file_name);
+int       ffp_stop_record2(FFPlayer *ffp);
+int       ffp_record_file2(FFPlayer *ffp, AVPacket *packet);
+
 /* all in milliseconds */
 int       ffp_seek_to_l(FFPlayer *ffp, long msec);
 long      ffp_get_current_position_l(FFPlayer *ffp);

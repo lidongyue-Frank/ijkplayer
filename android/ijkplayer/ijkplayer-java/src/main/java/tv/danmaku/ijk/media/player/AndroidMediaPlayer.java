@@ -225,6 +225,16 @@ public class AndroidMediaPlayer extends AbstractMediaPlayer {
             return false;
         }
     }
+//
+//    @Override
+//    public boolean isRecording() {
+//        try {
+//            return false;
+//        } catch (IllegalStateException e) {
+//            DebugLog.printStackTrace(e);
+//            return false;
+//        }
+//    }
 
     @Override
     public void seekTo(long msec) throws IllegalStateException {

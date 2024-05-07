@@ -225,6 +225,12 @@ public interface IMediaPlayer {
      */
     void snapShot();
 
+//    void startRecord(String file);
+//
+//    String stopRecord();
+//
+   //boolean isRecording();
+
     /**--------------------
      * AndroidMediaPlayer: M:
      */

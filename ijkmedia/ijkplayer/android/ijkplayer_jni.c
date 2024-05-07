@@ -278,6 +278,46 @@ LABEL_RETURN:
     return;
 }
 
+static jint
+IjkMediaPlayer_startRecord(JNIEnv *env, jobject thiz,jstring file)
+{
+    jint retval = 0;
+    IjkMediaPlayer *mp = jni_get_media_player(env, thiz);
+    JNI_CHECK_GOTO(mp, env, NULL, "mpjni: startRecord: null mp", LABEL_RETURN);
+    const char *nativeString = (*env)->GetStringUTFChars(env, file, 0);
+    retval = ijkmp_start_record(mp,nativeString);
+
+LABEL_RETURN:
+    ijkmp_dec_ref_p(&mp);
+    return retval;
+}
+
+static jint
+IjkMediaPlayer_stopRecord(JNIEnv *env, jobject thiz)
+{
+    jint retval = 0;
+    IjkMediaPlayer *mp = jni_get_media_player(env, thiz);
+    JNI_CHECK_GOTO(mp, env, NULL, "mpjni: stopRecord: null mp", LABEL_RETURN);
+    retval = ijkmp_stop_record(mp);
+LABEL_RETURN:
+    ijkmp_dec_ref_p(&mp);
+    return retval;
+}
+
+static jboolean
+IjkMediaPlayer_isRecording(JNIEnv *env, jobject thiz)
+{
+    jboolean retval = JNI_FALSE;
+    IjkMediaPlayer *mp = jni_get_media_player(env, thiz);
+    JNI_CHECK_GOTO(mp, env, NULL, "mpjni: stopRecord: null mp", LABEL_RETURN);
+
+    retval = ijkmp_isRecording(mp) ? JNI_TRUE : JNI_FALSE;
+
+LABEL_RETURN:
+    ijkmp_dec_ref_p(&mp);
+    return retval;
+}
+
 static void
 IjkMediaPlayer_prepareAsync(JNIEnv *env, jobject thiz)
 {
@@ -1213,6 +1253,9 @@ static JNINativeMethod g_methods[] = {
         (void *) IjkMediaPlayer_setMediaCodecSurface
     },
     { "_snapShot",              "()V",      (void *) IjkMediaPlayer_snapShot },
+    { "_startRecord",            "(Ljava/lang/String;)I",    (void *) IjkMediaPlayer_startRecord },
+    { "_stopRecord",             "()I",      (void *) IjkMediaPlayer_stopRecord },
+    { "isRecording",            "()Z",      (void *) IjkMediaPlayer_isRecording },
     { "_prepareAsync",          "()V",      (void *) IjkMediaPlayer_prepareAsync },
     { "_start",                 "()V",      (void *) IjkMediaPlayer_start },
     { "_stop",                  "()V",      (void *) IjkMediaPlayer_stop },

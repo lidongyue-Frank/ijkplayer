@@ -732,7 +732,7 @@ typedef struct FFPlayer {
     AVFormatContext *m_ofmt_ctx;        // 用于输出的AVFormatContext结构体
     AVOutputFormat *m_ofmt;
     pthread_mutex_t record_mutex;       // 锁
-    int is_record;                      // 是否在录制
+    bool is_record;                      // 是否在录制
     int record_error;
 
     int is_first;                       // 第一帧数据

@@ -727,6 +727,37 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
         return mVideoSarDen;
     }
 
+
+    private native int _startRecord(String file);
+    private native int _stopRecord();
+
+    private String savedVideoPath="";
+
+
+    public void startRecord(String file){
+        Log.e("IJKMedia fijk","startRecord file:"+file);
+        if(!isRecording()){
+            savedVideoPath=file;
+            Log.e("IJKMedia fijk","startRecord 开始录制:"+savedVideoPath);
+            _startRecord(file);
+        }else{
+            Log.e("IJKMedia fijk","startRecord 已在录制中:");
+        }
+    }
+
+
+    public String stopRecord(){
+        Log.e("IJKMedia fijk","stopRecord 保存的视频路径:"+savedVideoPath);
+        if(isRecording()){
+            _stopRecord();
+            return savedVideoPath;
+        }
+        return "";
+    }
+
+//    @Override
+    public native boolean isRecording();
+
     @Override
     public native boolean isPlaying();
 

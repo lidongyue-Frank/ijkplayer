@@ -146,7 +146,7 @@ static const AVOption ffp_context_options[] = {
                    DEFAULT_LAST_HIGH_WATER_MARK_IN_MS) },
 
     { "packet-buffering",                   "pause output until enough packets have been read after stalling",
-        OPTION_OFFSET(packet_buffering),    OPTION_INT(1, 0, 1) },
+        OPTION_OFFSET(packet_buffering),    OPTION_INT(0, 0, 1) },
     { "sync-av-start",                      "synchronise a/v start time",
         OPTION_OFFSET(sync_av_start),       OPTION_INT(1, 0, 1) },
     { "iformat",                            "force format",
