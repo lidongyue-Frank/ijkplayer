@@ -4784,12 +4784,12 @@ static int read_thread(void *arg)
                 }
             }
         }
-        if (pkt->stream_index == is->video_stream ){
-            av_log(ffp, AV_LOG_INFO, "inner pkt->pts:%" PRId64 "", pkt->pts);
-            av_log(ffp, AV_LOG_INFO, "----------------:%" PRId64 "\n", pkt->pts-ffp->start_pts);
-            av_log(ffp, AV_LOG_INFO, "inner pkt->dts:%" PRId64 "", pkt->dts);
-            av_log(ffp, AV_LOG_INFO, "----------------:%" PRId64 "\n", pkt->dts-ffp->start_dts);
-        }
+//        if (pkt->stream_index == is->video_stream ){
+//            av_log(ffp, AV_LOG_INFO, "inner pkt->pts:%" PRId64 "", pkt->pts);
+//            av_log(ffp, AV_LOG_INFO, "----------------:%" PRId64 "\n", pkt->pts-ffp->start_pts);
+//            av_log(ffp, AV_LOG_INFO, "inner pkt->dts:%" PRId64 "", pkt->dts);
+//            av_log(ffp, AV_LOG_INFO, "----------------:%" PRId64 "\n", pkt->dts-ffp->start_dts);
+//        }
         // 开始新加
         if (!ffp->is_first && pkt->pts == pkt->dts)
         { // 获取开始录制前dts等于pts最后的值，用于
